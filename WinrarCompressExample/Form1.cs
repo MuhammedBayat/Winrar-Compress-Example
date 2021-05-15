@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinrarCompressExample
@@ -35,9 +29,9 @@ namespace WinrarCompressExample
                                   targetArchiveName);
             
             //
-            foreach (var yedekVeri in filePathList)
+            foreach (var filePathRecord in filePathList)
             {
-                arguments += string.Format(" \"{0}\" ", yedekVeri);
+                arguments += string.Format(" \"{0}\" ", filePathRecord);
             }
             startInfo.Arguments = arguments;
 
